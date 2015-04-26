@@ -20,7 +20,8 @@ angular.module('myApp.Tutoria', ['ngRoute'])
             this.tomarTutoria = function()
             {
                 var IDTutoria = $scope.idtutoria;
-                var tutorias = $scope.tutorias;
+                $scope.tutorias = tutorias.tutorias;
+                var tutorias = tutorias.tutorias;
                 var encontro = null;
                 for(var i = 0 ; i<tutorias.length && encontro ===null;i++)
                 {
@@ -38,6 +39,7 @@ angular.module('myApp.Tutoria', ['ngRoute'])
 
             this.adicionarTutoria = function (tutoria)
             {
+                $scope.tutorias = tutorias.tutorias;
                 $scope.tutorias.push(tutoria);
             }
         }

@@ -17,6 +17,9 @@
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
 
+    <!-- LoginSign -->
+    <link href="css/logsign.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -236,11 +239,11 @@
             </div>
         </div>
     </footer>
+    <!--
 
-    <!--ModalLogin-->
+
     <div id="modalLogin" class="container modal">
         <div class="card card-container">
-            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" />-->
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
@@ -254,12 +257,113 @@
                     </label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-            </form><!-- /form -->
+            </form>
             <a href="#" class="forgot-password">
                 Forgot the password?
             </a>
-        </div><!-- /card-container -->
-    </div><!-- /container -->
+        </div>
+    </div>
+    -->
+
+    <div class="modal fade bs-modal-sm" id="modalLogin" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <br>
+                <div class="bs-example bs-example-tabs">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+                        <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active in" id="signin">
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <!-- Sign In Form -->
+                                    <!-- Text input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="userid">Usuario:</label>
+                                        <div class="controls">
+                                            <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="Correo (sin @uniandes.edu.co)" class="input-medium" required="">
+                                        </div>
+                                    </div>
+
+                                    <!-- Password input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="passwordinput">Contraseña:</label>
+                                        <div class="controls">
+                                            <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="Contraseña" class="input-medium">
+                                        </div>
+                                    </div>
+
+                                    <!-- Button -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="signin"></label>
+                                        <div class="controls">
+                                            <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="signup">
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <!-- Sign Up Form -->
+                                    <!-- Text input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="Email">Email:</label>
+                                        <div class="controls">
+                                            <input id="Email" name="Email" class="form-control" type="text" placeholder="JoeSixpack@sixpacksrus.com" class="input-large" required="">
+                                        </div>
+                                    </div>
+
+                                    <!-- Text input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="userid">Alias:</label>
+                                        <div class="controls">
+                                            <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+                                        </div>
+                                    </div>
+
+                                    <!-- Password input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="password">Password:</label>
+                                        <div class="controls">
+                                            <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                                            <em>1-8 Characters</em>
+                                        </div>
+                                    </div>
+
+                                    <!-- Text input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+                                        <div class="controls">
+                                            <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+                                        </div>
+                                    </div>
+
+                                    <!-- Button -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="confirmsignup"></label>
+                                        <div class="controls">
+                                            <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <center>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

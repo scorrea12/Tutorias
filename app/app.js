@@ -18,3 +18,9 @@ config(['$routeProvider', function($routeProvider)
                 controller: 'controladorTutoria'
             });
         }])
+    .factory('tutorias', [function(){
+        var o = {
+            tutorias: []
+        };
+        return o;
+    }])

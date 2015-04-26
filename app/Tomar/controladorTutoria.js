@@ -13,7 +13,7 @@ angular.module('myApp.Tutoria', ['ngRoute'])
         });
     }])
 
-    .controller('controladorTutoria', ['$scope',
+    .controller('controladorTutoria', ['$scope','tutorias',
 
         function() {
 
@@ -21,12 +21,24 @@ angular.module('myApp.Tutoria', ['ngRoute'])
             {
                 var IDTutoria = $scope.idtutoria;
                 var tutorias = $scope.tutorias;
-
+                var encontro = null;
+                for(var i = 0 ; i<tutorias.length && encontro ===null;i++)
+                {
+                    if(tutorias[i].id===IDTutoria)
+                    {
+                        $scope.tutoriaActual = tutorias[i];
+                        encontro = tutorias[i];
+                    }
+                }
+                if(encontro===null)
+                {
+                    alert("No se pudo tomar esa tutoria");
+                }
             }
 
-            this.adicionarTutoria = function ()
+            this.adicionarTutoria = function (tutoria)
             {
-
+                $scope.tutorias.push(tutoria);
             }
         }
     ]);

@@ -4,14 +4,17 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
-  'myApp.Tomar',
+  'myApp.Tutoria',
   'myApp.version'
 ]).
-config(['$routeProvider', function($routeProvider) {
-
-  $routeProvider
-      .otherwise({redirectTo: '/view1'});
-      .when('/Tomar', {
-            templateUrl:'/Tomar/view2.html'
-        });
-}]);
+config(['$routeProvider', function($routeProvider)
+    {
+            $routeProvider.when('/Tomar', {
+                templateUrl: 'Tomar/Tomar.html',
+                controller: 'controladorTutoria'
+            });
+            $routeProvider.when('/Publicar', {
+                templateUrl: 'Publicar/Publicar.html',
+                controller: 'controladorTutoria'
+            });
+        }])

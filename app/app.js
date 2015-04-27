@@ -17,6 +17,10 @@ config(['$routeProvider', function($routeProvider)
                 templateUrl: 'Publicar/Publicar.html',
                 controller: 'controladorTutoria'
             });
+            $routeProvider.when('/Ofrecer',{
+                templateUrl: 'Ofrecer/viewOfrecer.html',
+                controller: 'controladorOfrecer'
+            });
         }])
     .factory('tutorias', [function(){
         var o = {
